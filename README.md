@@ -30,7 +30,8 @@ An admin panel allows users to submit email requests and view the status of all 
 src/index.ts - Main Express application with routes for sending emails and retrieving status.
 src/mail.ts - Contains the logic for sending emails and retrying with different providers.
 views/index.html - Frontend HTML for the admin panel.
-[demo]()
+- [Tutorial](https://youtu.be/a5VeOa7Rbxw)
+- [live link](https://email-v2ndqtpkjq-uc.a.run.app)
 
 ## Setup
 
