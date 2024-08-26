@@ -20,5 +20,5 @@ RUN npm run build
 EXPOSE 8080
 
 # Command to run the application
-CMD ["node", "dist/src/index.js"]
+CMD npm run start 
 
