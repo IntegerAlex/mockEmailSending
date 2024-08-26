@@ -1,0 +1,28 @@
+{
+        "name": "pearlThoughts",
+        "version": "1.0.0",
+        "description": "",
+        "main": "src/index.js",
+        "scripts": {
+                "build": "tsc",
+                "start": "node dist/src/index.js",
+                "dev": "ts-node src/index.ts",
+                "lint": "npx eslint ."
+        },
+        "keywords": [],
+        "author": "",
+        "license": "ISC",
+        "devDependencies": {
+                "@eslint/js": "^9.9.1",
+                "@types/eslint__js": "^8.42.3",
+                "@types/express": "^4.17.21",
+                "@typescript-eslint/eslint-plugin": "^8.2.0",
+                "eslint": "^9.9.1",
+                "eslint-define-config": "^2.1.0",
+                "ts-node": "^10.9.2",
+                "typescript": "^5.5.4"
+        },
+        "dependencies": {
+                "express": "^4.19.2"
+        }
+}
