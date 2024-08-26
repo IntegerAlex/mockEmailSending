@@ -8,6 +8,14 @@ app.use(bodyParser.urlencoded({extended:true}))
 import {statusTracker , sentArr} from './mail'
 app.use(express.static(path.join(__dirname, '../views/')));
 app.post('/sendMail', (req, res) => {
+	if(!req.body.client){
+		res.send("Please provide a client email")
+		return;
+	}
+	else if(sentArr.includes(req.body.client)){
+		res.send("Email already sent to this client")
+		return;
+	}
     const client = req.body.client as string;
     console.log(client);
 
