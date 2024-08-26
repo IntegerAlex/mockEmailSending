@@ -2,6 +2,14 @@
 
 This project is a simple email sending service using Express and TypeScript. It demonstrates handling email sending with retry logic, status tracking, and providing a basic admin panel for monitoring the status of sent emails.
 
+## Tech-Stack
+    - Node.js
+    - Express
+    - TypeScript
+    - HTML + CSS + HTMX (for frontend)
+    - CloudRun (for deployment)
+
+
 ## How It Works
 
 The email sending service handles email delivery through two providers, providerOne and providerTwo, with a retry mechanism for each provider.
