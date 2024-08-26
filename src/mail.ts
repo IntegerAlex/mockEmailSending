@@ -1,3 +1,7 @@
+import {providerOneEmails} from './providerOneEmails';
+import {providerTwoEmails} from './providerTwoEmails'
+
+
 export let sentArr: string[] = [];
 let delay = 100;
 export const statusTracker: { [email: string]: { provider: string; retries: number; status: string } } = {};
@@ -14,8 +18,8 @@ function providerOne(email: string, retries: number, delay: number): Promise<{ e
             return;
         }
 
-        const arr = ['user@example.com', 'user2@example.com'];
-        if (arr.includes(email)) {
+        // testing const arr = ['user@example.com', 'user2@example.com'];
+        if (providerOneEmails.includes(email)) {
             send(email)
                 .then(() => {
                     statusTracker[email] = {
@@ -56,8 +60,8 @@ function providerTwo(email: string, retries: number, delay: number): Promise<{ e
 	    return;
         }
 
-        const arr = ["user3@example.com", "user4@example.com"];
-        if (arr.includes(email)) {
+     // testing   const arr = ["user3@example.com", "user4@example.com"];
+        if (providerTwoEmails.includes(email)) {
             send(email)
                 .then(() => {
                     statusTracker[email] = {
