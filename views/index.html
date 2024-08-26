@@ -2,16 +2,29 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-      <script src="https://unpkg.com/htmx.org@2.0.2"></script>
+    <script src="https://unpkg.com/htmx.org@2.0.2"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Panel</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .container {
+            display: flex;
+            justify-content: space-between;
         }
         .sendEmail, .sentEmails {
-            margin-bottom: 20px;
+            flex: 1;
+        }
+        .sendEmail {
+            margin-right: 10px;
+        }
+        .sentEmails {
+            margin-left: 10px;
         }
         .email-status {
             margin-bottom: 10px;
@@ -23,19 +36,21 @@
 </head>
 <body>
     <h1>Admin Panel</h1>
-    
-    <!-- Email Sending Status -->
-    <div class="sentEmails" hx-get="/getStatusTracker" hx-trigger="every 20s" hx-target=".sentEmails" hx-swap="innerHTML">
-        <!-- Status will be updated here -->
-    </div>
-    
-    <!-- Email Sending Form -->
-    <div class="sendEmail">
-        <form hx-post="/sendMail" hx-target=".status" hx-swap="innerHTML">
-            <input type="text" name="client" placeholder="Email" required>
-            <button type="submit">Send</button>
-        </form>
-	<p class="status"></p>
+
+    <div class="container">
+        <!-- Email Sending Form -->
+        <div class="sendEmail">
+            <form hx-post="/sendMail" hx-target=".status" hx-swap="innerHTML">
+                <input type="text" name="client" placeholder="Email" required>
+                <button type="submit">Send</button>
+            </form>
+            <p class="status"></p>
+        </div>
+
+        <!-- Email Sending Status -->
+        <div class="sentEmails" hx-get="/getStatusTracker" hx-trigger="every 20s" hx-target=".sentEmails" hx-swap="innerHTML">
+            <!-- Status will be updated here -->
+        </div>
     </div>
 </body>
 </html>
