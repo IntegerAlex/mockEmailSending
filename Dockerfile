@@ -17,7 +17,7 @@ RUN npm install -g typescript
 COPY . .
 
 # Compile TypeScript to JavaScript
-RUN npm run build
+RUN tsc
 
 # Ensure the compiled files are in the correct location
 RUN ls -la /app/dist/src/
