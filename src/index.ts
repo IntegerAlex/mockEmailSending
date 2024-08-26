@@ -2,6 +2,7 @@ import express from 'express';
 import {sendMail} from './mail'
 import bodyParser from 'body-parser'
 import path from 'path'
+require('dotenv').config()
 const app = express();
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended:true}))
@@ -46,7 +47,8 @@ app.get('/' , (req,res)=>{
 	res.sendFile(path.join(__dirname, '../../views/index.html'));
 })
 
-app.listen(8080,()=>{
+const PORT = process.env.PORT || 8080;
+app.listen(PORT,()=>{
 	console.log("server started")
 
 })
