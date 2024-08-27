@@ -1,5 +1,7 @@
 # Email Sending Service
 
+[![Time Spent On Project](https://wakatime.com/badge/user/018e6a20-9532-42e6-b0cd-906f7586aac9/project/2cba7168-90d3-47cd-9de2-8a0039bb7fe5.svg)](https://wakatime.com/badge/user/018e6a20-9532-42e6-b0cd-906f7586aac9/project/2cba7168-90d3-47cd-9de2-8a0039bb7fe5)
+
 This project is a simple email sending service using Express and TypeScript. It demonstrates handling email sending with retry logic, status tracking, and providing a basic admin panel for monitoring the status of sent emails.
 
 ## Tech-Stack
